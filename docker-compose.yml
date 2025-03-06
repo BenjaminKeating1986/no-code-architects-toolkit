@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  no-code-toolkit:
+    image: no-code-architects-toolkit
+    container_name: no-code-toolkit
+    restart: unless-stopped  # Ensures the container restarts if it fails
+    ports:
+      - "9025:8080"  # Map host port 8080 to container port 8080
+    environment:
+      API_KEY: "your_api_key"
